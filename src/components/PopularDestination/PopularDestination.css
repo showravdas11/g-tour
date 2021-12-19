@@ -1,0 +1,76 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.popular-head{
+    text-align: center;
+    margin-top: 80px;
+}
+.popular-head h2{
+    font-size: 35px;  
+    font-weight: 700;
+    color: black; 
+    font-family: 'Poppins', sans-serif;
+}
+.popular-head p{
+    position: relative;
+    font-size: 18px;  
+    font-weight: 500;  
+    color: rgba(19, 19, 19, 0.52);
+    font-family: 'Poppins', sans-serif;
+}
+.popular-head p::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #FF4A52;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.popular-images{
+    margin-top: 50px;
+}
+.images {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.images img{
+    border-radius: 10px;
+    filter: brightness(50%);
+    margin-top: 5px;
+    transition: 0.4;
+}
+.Tokyo {
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+.images img:hover{
+    margin-top: 0px;
+    box-shadow: -8px 13px 39px -10px rgba(0,0,0,0.64);
+-webkit-box-shadow: -8px 13px 39px -10px rgba(0,0,0,0.64);
+-moz-box-shadow: -8px 13px 39px -10px rgba(0,0,0,0.64);
+}
+
+

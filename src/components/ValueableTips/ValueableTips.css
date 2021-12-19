@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.valueable-head{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.valueable-head h2{
+    font-size: 35px;  
+    font-weight: 700;
+    color: black; 
+    font-family: 'Poppins', sans-serif;
+}
+.valueable-head p{
+    position: relative;
+    font-size: 18px;  
+    font-weight: 500;  
+    color: rgba(19, 19, 19, 0.52);
+    font-family: 'Poppins', sans-serif;
+}
+
+.valueable-head p::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #5856D6;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.french{
+    border: 1px solid rgba(143, 140, 140, 0.445);
+    margin-bottom: 30px;
+    transition: 1s;
+    margin-top: 30px;
+}
+.french:hover{
+    transform: scale(1.1);
+    box-shadow: -7px 20px 77px -6px rgba(5,5,5,0.66);
+-webkit-box-shadow: -7px 20px 77px -6px rgba(5,5,5,0.66);
+-moz-box-shadow: -7px 20px 77px -6px rgba(5,5,5,0.66);
+}
+.value-card-head{
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.value-card-head h4{
+   color: black;
+   font-weight: bold
+}
+.value-card-head p{
+   color: rgba(58, 58, 58, 0.63);
+   font-weight: 600;
+}
+.value-img{
+    position: relative;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+.price{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    background: #FF4A52;
+    padding: 4px 12px 4px 12px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+.prices{
+    font-size: 15px;
+    padding-right: 5px;
+    color: rgba(255, 255, 255, 0.705);
+    font-weight: 500;
+}
+
+.date-time{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.fa-star{
+    color: #1EC6B6;
+    font-size: 12px;
+}
+span{
+    color: black;
+    font-weight: 600;
+    padding-left: 7px;
+}
