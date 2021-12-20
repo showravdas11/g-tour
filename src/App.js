@@ -11,10 +11,32 @@ import Nav from './components/Nav/Nav';
 import SeeAllServices from './components/SeeAllServices/SeeAllServices';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import SeeSingleService from './components/SeeSingleService/SeeSingleService';
+import { useState } from 'react';
 
 function App() {
+
+  const [isPreLoader, setIsPreLoader] = useState(true)
+  setTimeout(() => {
+    setIsPreLoader(false)
+  }, 5000)
+
   return (
     <div>
+      {
+        isPreLoader ? <PreLoader /> : <HomePage />
+      }
+    </div>
+  );
+}
+
+export default App;
+
+const HomePage = () => {
+  return (
+    <AuthProvider>
       <Router>
         <Nav></Nav>
         <Switch>
@@ -27,9 +49,9 @@ function App() {
           <Route path="/about">
             <About></About>
           </Route>
-          <Route path="/seeall">
+          <PrivateRoute path="/seeall">
             <SeeAllServices></SeeAllServices>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -38,8 +60,20 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
-  );
+    </AuthProvider>
+  )
 }
 
-export default App;
+const PreLoader = () => {
+  return <h1> <div class="loader">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+    <div class="seven"></div>
+    <div class="eight"></div>
+  </div>
+    <div class="open_grepper_editor" title="Edit & Save To Grepper"></div></h1>
+}

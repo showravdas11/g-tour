@@ -6,3 +6,25 @@
 .login-form{
    margin-top: 150px;
 }
+
+.Log-btn{
+    background-color: #F4834A;
+    border: none;
+    padding: 8px 25px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.google-btn{
+    background-color: #F4834A;
+    border: none;
+    padding: 8px 25px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.google{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
