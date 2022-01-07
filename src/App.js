@@ -15,6 +15,7 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import SeeSingleService from './components/SeeSingleService/SeeSingleService';
 import { useState } from 'react';
+import Gallery from './components/Gallery/Gallery';
 
 function App() {
 
@@ -57,6 +58,9 @@ const HomePage = () => {
           </Route>
           <Route path="/register">
             <Register></Register>
+          </Route>
+          <Route path="/gallery">
+            <Gallery></Gallery>
           </Route>
         </Switch>
       </Router>

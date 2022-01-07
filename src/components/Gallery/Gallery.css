@@ -1,0 +1,6 @@
+.Gallery-bg{
+    background:linear-gradient(0deg, rgba(105, 5, 187, 0.301), rgba(105, 5, 187, 0.582)), url('https://gaviaspreview.com/wp/tevily/wp-content/uploads/2021/10/bg-5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}

@@ -5,7 +5,7 @@ const SeeAllServices = () => {
     const [singles, setSingles] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/tour')
+        fetch('https://cryptic-dusk-38101.herokuapp.com/tour')
             .then(res => res.json())
             .then(data => setSingles(data))
     }, [])
